@@ -1,5 +1,5 @@
 import { guestHTML } from "./guestList.js"
-
+import { serviceHTML } from "./servicesList.js"
 
 
 const mainContainer = document.querySelector("#container")
@@ -12,7 +12,8 @@ const applicationHTML = `
         ${guestHTML()}
         </section>
         <section class="detail--column list details__">
-        
+        <h1>Services</h1>
+        ${serviceHTML()}
         </section>
 
     </article>
