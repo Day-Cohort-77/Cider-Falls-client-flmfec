@@ -1,26 +1,12 @@
-import { guestHTML } from "./guestList.js"
-import { serviceHTML } from "./servicesList.js"
-import { parkHTML } from "./parkAreas.js"
+import { guestHTML } from "./guestList.js";
+import { serviceHTML } from "./servicesList.js";
+import { parkHTML } from "./parkAreas.js";
 
-const mainContainer = document.querySelector("#container")
+// Render services above the park grid
+document.getElementById("services-list").innerHTML = serviceHTML();
 
-const applicationHTML = `
-<h1>Cider Falls River Trails</h1>
-<article class="details">
-        <section class="detail--column list details__">
-        <h1>Parks</h1>
-        ${parkHTML()}
-        </section>
-        <section class="detail--column list details__">
-        <h1>Guest List</h1>
-        ${guestHTML()}
-        </section>
-        <section class="detail--column list details__">
-        <h1>Services</h1>
-        ${serviceHTML()}
-        </section>
+// Render park areas in the grid
+document.getElementById("areas-grid").innerHTML = parkHTML();
 
-    </article>
-    `
-
-    mainContainer.innerHTML = applicationHTML
+// Render guests in the sidebar
+document.getElementById("guests-list").innerHTML = guestHTML();

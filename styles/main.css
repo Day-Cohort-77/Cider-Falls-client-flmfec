@@ -1,0 +1,182 @@
+/* Background image for the whole page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: url("../chapters/images/cider_falls_bg.png") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* Header styles */
+.main-header {
+    display: flex;
+    align-items: center;
+    padding: 24px 0 16px 0;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 24px;
+    background: rgba(255,255,255,0.85);
+    gap: 18px;
+}
+.logo-img {
+    height: 60px;
+}
+.park-name {
+    font-size: 2em;
+    color: #2D5016;
+    font-weight: bold;
+}
+
+/* Main content layout */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+.areas-section {
+    flex: 2;
+    text-align: left;
+}
+.areas-section h2 {
+    color: #2D5016;
+    margin-bottom: 12px;
+}
+#areas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 18px;
+}
+.park-card {
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    padding: 2rem 1.5rem;
+    min-width: 180px;
+    font-size: 1.1rem;
+    color: #2d3a4a;
+    font-weight: 600;
+    transition: box-shadow 0.2s;
+}
+.park-card:hover {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+.park-title {
+    font-weight: bold;
+    color: #2D5016;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+}
+.service-badge {
+    background: #e0e0e0;
+    border-radius: 12px;
+    padding: 3px 10px;
+    font-size: 13px;
+    margin: 2px 0;
+    display: inline-block;
+    cursor: pointer;
+    color: #2D5016;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+.service-badge:hover {
+    background: #c8e6c9;
+}
+
+.guests-section {
+    flex: 1;
+    text-align: right;
+    background: rgba(255,255,255,0.85);
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    min-width: 220px;
+}
+.guests-section h2 {
+    color: #2D5016;
+    margin-bottom: 12px;
+    text-align: right;
+}
+#guests-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#guests-list li {
+    margin-bottom: 8px;
+    color: #333;
+    background: #f5f5f5;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    min-width: 120px;
+}
+.contact-info {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #2D5016;
+    font-size: 0.98em;
+    font-weight: 400;
+    padding: 10px 0 8px 0;
+    background: rgba(255, 255, 255, 0.85);
+    opacity: 0.85;
+    letter-spacing: 0.01em;
+    transition: opacity 0.2s;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.contact-info ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left; /* keeps list items left-aligned within the centered block */
+}
+
+.contact-info li {
+    padding: 2px 0;
+}
+#services-list {
+    margin-bottom: 18px;
+    text-align: center;
+}
+.all-services {
+    display: inline-block;
+}
+#services-list .service-badge {
+    margin: 0 6px 6px 0;
+    cursor: pointer;
+}
+@media (max-width: 900px) {
+    .layout {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .guests-section {
+        text-align: left;
+        margin-left: 0;
+    }
+    #areas-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    #areas-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+}
