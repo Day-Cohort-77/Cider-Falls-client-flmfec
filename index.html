@@ -4,26 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cider Falls Park</title>
+    <!-- Link to main stylesheet -->
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
+    <!-- Header section with logo and park name -->
     <header class="main-header">
         <img src="./chapters/images/cider_falls_logo.png" alt="Cider Falls Park Logo" class="logo-img">
         <span class="park-name">Cider Falls Park</span>
     </header>
+
+    <!-- Main content area containing park areas and guest list -->
     <main class="main-content">
         <div class="layout">
+            <!-- Left section: Park areas and services -->
             <section class="areas-section">
                 <h2>Park Areas</h2>
+                <!-- Services will be populated by JavaScript -->
                 <div id="services-list"></div> 
+                <!-- Park areas will be populated by JavaScript -->
                 <div id="areas-grid"></div>
             </section>
+
+            <!-- Right section: Current guests sidebar -->
             <aside class="guests-section">
                 <h2>Current Guests</h2>
+                <!-- Guest will be populated by JavaScript -->
                 <ul id="guests-list"></ul>
             </aside>
         </div>
     </main>
+
+    <!-- Footer with contact information -->
     <footer class="contact-info">
         <ul>
             <li>📧 ciderfalls123@gmail.com</li>
@@ -31,6 +43,8 @@
             <li>📍 123 Yogi Bear Ln</li>
         </ul>
     </footer>
+
+    <!-- JavaScript module for dynamic content -->
     <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>

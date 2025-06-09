@@ -1,17 +1,15 @@
-/* Background image for the whole page */
+/* Base page styling with background image */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     background: url("../chapters/images/cider_falls_bg.png") no-repeat center center fixed;
     background-size: cover;
-    min-height: 100vh;
 }
 
-/* Header styles */
+/* Header styling with logo and park name */
 .main-header {
     display: flex;
-    align-items: center;
-    padding: 24px 0 16px 0;
+    padding: 24px 0 16px;
     border-bottom: 1px solid #e0e0e0;
     margin-bottom: 24px;
     background: rgba(255,255,255,0.85);
@@ -26,31 +24,36 @@ body {
     font-weight: bold;
 }
 
-/* Main content layout */
+/* Main content container with max width and centering */
 .main-content {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+/* Flexbox layout for main content area */
 .layout {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     gap: 40px;
 }
+
+/* Left section containing park areas */
 .areas-section {
     flex: 2;
-    text-align: left;
 }
 .areas-section h2 {
     color: #2D5016;
     margin-bottom: 12px;
 }
+
+/* Grid layout for park areas */
 #areas-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 18px;
 }
+
+/* Individual park area card styling */
 .park-card {
     background: #fff;
     border-radius: 1.5rem;
@@ -60,7 +63,6 @@ body {
     font-size: 1.1rem;
     color: #2d3a4a;
     font-weight: 600;
-    transition: box-shadow 0.2s;
 }
 .park-card:hover {
     box-shadow: 0 4px 24px rgba(0,0,0,0.12);
@@ -71,13 +73,17 @@ body {
     margin-bottom: 10px;
     font-size: 1.1em;
 }
+
+/* Services list styling */
 .services-list {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
     margin-top: 8px;
 }
-.service-badge {
+
+/* Individual services styling */
+.services {
     background: #e0e0e0;
     border-radius: 12px;
     padding: 3px 10px;
@@ -87,15 +93,14 @@ body {
     cursor: pointer;
     color: #2D5016;
     font-weight: 500;
-    transition: background 0.2s;
 }
-.service-badge:hover {
+.services:hover {
     background: #c8e6c9;
 }
 
+/* Right sidebar for guests section */
 .guests-section {
     flex: 1;
-    text-align: right;
     background: rgba(255,255,255,0.85);
     border-radius: 1rem;
     padding: 1rem 2rem;
@@ -106,6 +111,8 @@ body {
     margin-bottom: 12px;
     text-align: right;
 }
+
+/* Guest list styling */
 #guests-list {
     list-style: none;
     padding: 0;
@@ -120,6 +127,8 @@ body {
     display: inline-block;
     min-width: 120px;
 }
+
+/* Footer contact information styling */
 .contact-info {
     position: fixed;
     bottom: 0;
@@ -129,26 +138,27 @@ body {
     color: #2D5016;
     font-size: 0.98em;
     font-weight: 400;
-    padding: 10px 0 8px 0;
+    padding: 10px 0 8px;
     background: rgba(255, 255, 255, 0.85);
     opacity: 0.85;
-    letter-spacing: 0.01em;
-    transition: opacity 0.2s;
     border-top: 1px solid rgba(0,0,0,0.1);
     z-index: 100;
 }
 
+/* Contact info list styling */
 .contact-info ul {
     display: inline-block;
     margin: 0;
     padding: 0;
     list-style: none;
-    text-align: left; /* keeps list items left-aligned within the centered block */
+    text-align: left;
 }
 
 .contact-info li {
     padding: 2px 0;
 }
+
+/* Services list container styling */
 #services-list {
     margin-bottom: 18px;
     text-align: center;
@@ -159,24 +169,4 @@ body {
 #services-list .service-badge {
     margin: 0 6px 6px 0;
     cursor: pointer;
-}
-@media (max-width: 900px) {
-    .layout {
-        flex-direction: column;
-        gap: 24px;
-    }
-    .guests-section {
-        text-align: left;
-        margin-left: 0;
-    }
-    #areas-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, 1fr);
-    }
-}
-@media (max-width: 600px) {
-    #areas-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 1fr);
-    }
 }
