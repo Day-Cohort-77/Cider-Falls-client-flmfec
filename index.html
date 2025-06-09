@@ -3,14 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cider Falls</title>
+    <title>Cider Falls Park</title>
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-        <main id="container">
-
-             </main>
-
-             <script type="module" src="./scripts/main.js"></script>
+    <header class="main-header">
+        <img src="./chapters/images/cider_falls_logo.png" alt="Cider Falls Park Logo" class="logo-img">
+        <span class="park-name">Cider Falls Park</span>
+    </header>
+    <main class="main-content">
+        <div class="layout">
+            <section class="areas-section">
+                <h2>Park Areas</h2>
+                <div id="services-list"></div> 
+                <div id="areas-grid"></div>
+            </section>
+            <aside class="guests-section">
+                <h2>Current Guests</h2>
+                <ul id="guests-list"></ul>
+            </aside>
+        </div>
+    </main>
+    <footer class="contact-info">
+        <ul>
+            <li>📧 ciderfalls123@gmail.com</li>
+            <li>📞 123-456-7890</li>
+            <li>📍 123 Yogi Bear Ln</li>
+        </ul>
+    </footer>
+    <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>
