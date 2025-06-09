@@ -10,6 +10,7 @@ const applicationHTML = `
         <section class="detail--column list details__">
         <h1>Parks</h1>
         ${parkHTML()}
+        </section>
         <section class="detail--column list details__">
         <h1>Guest List</h1>
         ${guestHTML()}
